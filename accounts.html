@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Account</title>
+    <link rel="stylesheet" href="form2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Contact Info -->
+        <div class="contact-info">
+            <h2>Account Information</h2>
+            <p><strong>Visit us</strong><br>
+                Come say hello at our office H.Q.<br>
+                Cifton karachi VIC 3136 AU
+            </p>
+            <p><strong>Chat to us</strong><br>
+                Our friendly team is here to help.<br>
+                hello@paysphere.com
+            </p>
+            <p><strong>Call us</strong><br>
+                Mon-Fri from 8am to 6pm<br>
+                (+995) 555-55-55-55
+           
+            <!-- Navigation to Customer Form -->
+            <div class="navigation">
+                <a href="AccountHolders.html" class="nav-btn">Go to accountholder Form</a>
+            </div>
+              <!-- Navigation to Account Holder Form -->
+              <div class="navigation">
+                <a href="index.html" class="nav-btn">Go to Home</a>
+            </div>
+        </div>
+
+        <!-- Right Section: Account Form -->
+        <div class="form-section">
+            <form action="accounts.php" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="accountID">Account ID</label>
+                        <input type="text" id="accountID" name="accountID" placeholder="Enter Account ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="accountNumber">Account Number</label>
+                        <input type="text" id="accountNumber" name="accountNumber" placeholder="Enter Account Number" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="accountType">Account Type</label>
+                    <input type="text" id="accountType" name="accountType" placeholder="Enter Account Type" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="balance">Balance</label>
+                    <input type="number" id="balance" name="balance" placeholder="Enter Balance" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="branchID">Branch ID</label>
+                    <input type="text" id="branchID" name="branchID" placeholder="Enter Branch ID" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="createdAt">Created At</label>
+                    <input type="date" id="createdAt" name="createdAt" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Add Account</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

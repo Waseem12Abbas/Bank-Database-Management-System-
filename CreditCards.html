@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Credit Card</title>
+    <link rel="stylesheet" href="form2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Contact Info -->
+        <div class="contact-info">
+            <h2>Credit Card Information</h2>
+            <p><strong>Visit us</strong><br>
+                Come say hello at our office H.Q.<br>
+                Clifton karachi  South VIC 3136 AU
+            </p>
+            <p><strong>Chat to us</strong><br>
+                Our friendly team is here to help.<br>
+                hello@paysphere.com
+            </p>
+            <p><strong>Call us</strong><br>
+                Mon-Fri from 8am to 6pm<br>
+                (+995) 555-55-55-55
+            </p>
+            
+            <!-- Navigation to Account Holder Form -->
+            <div class="navigation">
+                <a href="transactions.html" class="nav-btn">Go to Transaction Form</a>
+            </div>
+
+             <!-- Navigation to Account Holder Form -->
+             <div class="navigation">
+                <a href="index.html" class="nav-btn">Go to Home</a>
+            </div>
+        </div>
+
+        <!-- Right Section: Credit Card Form -->
+        <div class="form-section">
+            <form action="CreditCards.php" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cardID">Card ID</label>
+                        <input type="text" id="cardID" name="cardID" placeholder="Enter Card ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerID">Customer ID</label>
+                        <input type="text" id="customerID" name="customerID" placeholder="Enter Customer ID" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter Card Number" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="date" id="expiryDate" name="expiryDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="creditLimit">Credit Limit</label>
+                        <input type="number" id="creditLimit" name="creditLimit" placeholder="Enter Credit Limit" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="balance">Balance</label>
+                        <input type="number" id="balance" name="balance" placeholder="Enter Balance" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <input type="text" id="status" name="status" placeholder="Active/Inactive" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Add Credit Card</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

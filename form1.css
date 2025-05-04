@@ -1,0 +1,123 @@
+/* Enhanced style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #2c3e50, #3498db); /* Updated gradient */
+    color: #333;
+}
+
+form {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px; /* More rounded corners */
+    width: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    transition: all 0.4s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+form::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    transition: all 0.6s ease;
+}
+
+form:hover::before {
+    top: -70%;
+    left: -70%;
+    transition: all 0.8s ease;
+}
+
+form label {
+    margin-top: 15px;
+    display: block;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded input fields */
+    outline: none;
+    font-size: 15px;
+    background-color: #f1f1f1;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="date"]:focus {
+    border-color: #3498db; /* Border color on focus */
+    background-color: #e9f5ff; /* Light background when focused */
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Button gradient */
+    color: #ffffff;
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.4s, transform 0.2s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+form input[type="submit"]:hover {
+    background: linear-gradient(135deg, #2980b9, #1a5276); /* Darker gradient on hover */
+    transform: translateY(-3px); /* Button lift effect on hover */
+}
+
+form input[type="submit"]:active {
+    transform: translateY(1px); /* Subtle press-down effect */
+}
+
+/* Additional Styling for Form Header */
+h2 {
+    color: #ffffff;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); /* More pronounced text shadow */
+}
+
+/* Adding some animation to input fields */
+form input[type="text"]:hover,
+form input[type="email"]:hover,
+form input[type="date"]:hover {
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 20px 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}

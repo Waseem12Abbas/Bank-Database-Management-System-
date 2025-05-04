@@ -1,0 +1,150 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0f17; /* Darker background for a modern look */
+    color: #d1d5db;
+}
+
+/* Home Container */
+.home-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0f172a, #111827); /* Darker sleek gradient */
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+/* Header */
+.home-header h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #e5e7eb; /* Slightly lighter text for emphasis */
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.home-header p {
+    font-size: 1.4rem;
+    color: #94a3b8; /* Muted gray-blue for readability */
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+/* Categories Section */
+.category-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 20px;
+}
+
+/* Category Cards */
+.category-card {
+    background-color: #1f2937; /* Dark gray-blue for card */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(75, 85, 99, 0.2), rgba(59, 130, 246, 0.4));
+    transition: top 0.6s ease;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.category-card:hover::before {
+    top: 0;
+}
+
+.category-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3), 0 15px 20px rgba(0, 0, 0, 0.2);
+    border-color: #3b82f6; /* Bright blue border on hover */
+}
+
+.category-card h2 {
+    font-size: 1.8rem;
+    color: #e2e8f0; /* Lighter text */
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.category-card p {
+    font-size: 1rem;
+    color: #9ca3af; /* Softer gray for text */
+    margin-bottom: 25px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+/* Buttons */
+.category-btn {
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Bright blue gradient */
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+.category-btn:hover {
+    background: linear-gradient(135deg, #1e3a8a, #1d4ed8); /* Darker on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced Animations */
+.category-card, .category-btn {
+    will-change: transform, background, box-shadow;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-header h1 {
+        font-size: 3rem;
+    }
+    
+    .category-card {
+        padding: 25px;
+    }
+    
+    .category-btn {
+        font-size: 1rem;
+        padding: 12px 22px;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transaction</title>
+    <link rel="stylesheet" href="form2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Contact Info -->
+        <div class="contact-info">
+            <h2>Transaction Information</h2>
+            <p><strong>Visit us</strong><br>
+                Come say hello at our office H.Q.<br>
+                67 Wisteria Way Croydon South VIC 3136 AU
+            </p>
+            <p><strong>Chat to us</strong><br>
+                Our friendly team is here to help.<br>
+                hello@paysphere.com
+            </p>
+            <p><strong>Call us</strong><br>
+                Mon-Fri from 8am to 6pm<br>
+                (+995) 555-55-55-55
+            </p>
+            
+              <!-- Navigation to Account Holder Form -->
+              <div class="navigation">
+                <a href="index.html" class="nav-btn">Go to Home</a>
+            </div>
+        </div>
+
+        <!-- Right Section: Transaction Form -->
+        <div class="form-section">
+            <form action="transactions.php" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="TransactionID">Transaction ID</label>
+                        <input type="number" id="TransactionID" name="TransactionID" placeholder="Enter Transaction ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="AccountID">Account ID</label>
+                        <input type="number" id="AccountID" name="AccountID" placeholder="Enter Account ID" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CardID">Card ID (Optional)</label>
+                    <input type="number" id="CardID" name="CardID" placeholder="Enter Card ID">
+                </div>
+
+                <div class="form-group">
+                    <label for="TransactionType">Transaction Type</label>
+                    <select id="TransactionType" name="TransactionType" required>
+                        <option value="Deposit">Deposit</option>
+                        <option value="Withdrawal">Withdrawal</option>
+                        <option value="Transfer">Transfer</option>
+                        <option value="Payment">Payment</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="Amount">Amount</label>
+                        <input type="number" id="Amount" name="Amount" placeholder="Enter Amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="TransactionDate">Transaction Date</label>
+                        <input type="date" id="TransactionDate" name="TransactionDate" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Remarks">Remarks</label>
+                    <textarea id="Remarks" name="Remarks" placeholder="Enter any remarks here"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Add Transaction</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

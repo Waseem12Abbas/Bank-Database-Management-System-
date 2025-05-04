@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Customer</title>
+    <link rel="stylesheet" href="form2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Contact Info -->
+        <div class="contact-info">
+            <h2>Get in touch</h2>
+            <p><strong>Visit us</strong><br>
+                Come say hello at our office H.Q.<br>
+                67 Wisteria Way Croydon South VIC 3136 AU
+            </p>
+            <p><strong>Chat to us</strong><br>
+                Our friendly team is here to help.<br>
+                hello@paysphere.com
+            </p>
+            <p><strong>Call us</strong><br>
+                Mon-Fri from 8am to 6pm<br>
+                (+995) 555-55-55-55
+            </p> 
+              <!-- Navigation to Customer Form -->
+              <div class="navigation">
+                <a href="accounts.html" class="nav-btn">Go to Account Form</a>
+            </div>
+
+        </div>
+                       
+        <!-- Right Section: Customer Form -->
+        <div class="form-section">
+            <form action="customers.php" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customerID">Customer ID</label>
+                        <input type="text" id="customerID" name="customerID" placeholder="Enter Customer ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="FirstName">Customer Name</label>
+                        <input type="text" id="FirstName"  name="FirstName" placeholder="Enter Customer Name" required>
+                    </div>
+                </div>
+                 
+                <div class="form-group">
+                    <label for=" Address">Customer Address</label>
+                    <input type="text" id=" Address" name=" Address" placeholder="Enter Customer Address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="PhoneNumber">Phone Number</label>
+                    <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Enter Phone Number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="Email" id="Email" name="Email" placeholder="Enter Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="DateOfBirth">Date of Birth</label>
+                    <input type="date" id="DateOfBirth" name="DateOfBirth" required>
+                </div>
+
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacyPolicy" name="privacyPolicy">
+                    <label for="privacyPolicy">Id like to receive more information about company, I understand and agree to the <a href="#">Privacy Policy</a>.</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Add Customer</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+ 

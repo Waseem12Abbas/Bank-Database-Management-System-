@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Account Holder</title>
+    <link rel="stylesheet" href="form2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Contact Info -->
+        <div class="contact-info">
+            <h2>Account Holder Information</h2>
+            <p><strong>Visit us</strong><br>
+                Come say hello at our office H.Q.<br>
+                67 Wisteria Way Croydon South VIC 3136 AU
+            </p>
+            <p><strong>Chat to us</strong><br>
+                Our friendly team is here to help.<br>
+                hello@paysphere.com
+            </p>
+            <p><strong>Call us</strong><br>
+                Mon-Fri from 8am to 6pm<br>
+                (+995) 555-55-55-55
+            </p>
+            
+            <!-- Navigation to Account Form -->
+            <div class="navigation">
+                <a href="CreditCards.html" class="nav-btn">Go to Credit Card Form</a>
+            </div>
+            <!-- Navigation to Account Holder Form -->
+            <div class="navigation">
+                <a href="index.html" class="nav-btn">Go to Home</a>
+            </div>
+        </div>
+
+        <!-- Right Section: Account Holder Form -->
+        <div class="form-section">
+            <form action="accountholders.php" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="accountholderID">Account Holder ID</label>
+                        <input type="text" id="AccountHolderID" name="AccountHolderID" placeholder="Enter Account Holder ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="AccountID">Account ID</label>
+                        <input type="text" id="AccountID" name="AccountID" placeholder="Enter Account ID" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="CustomerID">Customer ID</label>
+                    <input type="text" id="CustomerID" name="CustomerID" placeholder="Enter Customer ID" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="HolderType">Holder Type</label>
+                    <input type="text" id="HolderType" name="HolderType" placeholder="Primary/Secondary" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Add Account Holder</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
